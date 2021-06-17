@@ -26,6 +26,7 @@ const theme = {
     primary: "#FFF6E5",
     secondary: "#FF6978",
     texts: "#3F4043",
+    placeholder: "#54565A",
     white: "#FFFFFF",
     black: "#000000",
     gray: "rgba(49, 49, 49, 0.6)"
@@ -40,5 +41,9 @@ const theme = {
     xxlarge: "12.8rem"
   }
 };
+
+type ThemeType = typeof theme;
+
+export type { ThemeType };
 
 export default theme;

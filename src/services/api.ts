@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-	baseURL: "https://localhost:3333",
+  baseURL: "https://www.googleapis.com/books/v1/volumes?q="
 });
 
 export default api;

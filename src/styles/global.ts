@@ -1,6 +1,7 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
+import { ThemeType } from "./theme";
 
-const GlobalStyles = createGlobalStyle`
+const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
     @font-face {
     font-family: 'SfPro';
     font-style: normal;
@@ -38,12 +39,17 @@ const GlobalStyles = createGlobalStyle`
 html {
   font-size: 62.5%;
 }
-html, body{
-  height: 100%;
-}
-body {
-  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+${({ theme }) => css`
+  body {
+    font-family: ${theme.font.family};
+  }
+  input,
+  button,
+  select {
+    font-family: ${theme.font.family};
+  }
+`}
+
 
 button {
   cursor: pointer;
