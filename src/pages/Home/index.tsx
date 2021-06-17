@@ -16,6 +16,11 @@ const Home = () => {
   return (
     <S.Wrapper>
       <Searchbar />
+      <S.GreetingWrapper>
+        <h4>Hi, &nbsp;</h4>
+        <S.Username>Mehmed Al Fatih &nbsp;</S.Username>
+        <h4>&#128075;</h4>
+      </S.GreetingWrapper>
     </S.Wrapper>
   );
 };

@@ -42,6 +42,12 @@ html {
 ${({ theme }) => css`
   body {
     font-family: ${theme.font.family};
+    background-color: ${theme.colors.primary};
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   input,
   button,

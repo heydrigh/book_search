@@ -6,7 +6,7 @@ const Searchbar = ({ ...rest }: InputHTMLAttributes<HTMLInputElement>) => {
   return (
     <S.Wrapper>
       <img src={magnifierIcon} alt="Magnifier" />
-      <S.Input placeholder="Search Book" {...rest} />
+      <S.Input placeholder="Search book" {...rest} />
     </S.Wrapper>
   );
 };

@@ -16,7 +16,7 @@ const theme = {
       xsmall: "1.6rem",
       small: "1.8rem",
       medium: "2.2rem",
-      large: "2.6rem",
+      large: "2.4rem",
       xlarge: "3.4rem",
       xxlarge: "5.2rem"
     }
