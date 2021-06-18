@@ -4,6 +4,7 @@ import api from "../../services/api";
 import Searchbar from "../../components/Searchbar";
 import Discover from "../../components/Discover";
 import CurrenlyReading from "../../components/CurrentlyReading";
+import Reviews from "../../components/Reviews";
 
 const Home = () => {
   const getBook = async () => {
@@ -16,11 +17,12 @@ const Home = () => {
       <Searchbar />
       <S.GreetingWrapper>
         <h4>Hi, &nbsp;</h4>
-        <S.Username>Mehmed Al Fatih &nbsp;</S.Username>
+        <S.Username>Heydrigh Ribeiro &nbsp;</S.Username>
         <h4>&#128075;</h4>
       </S.GreetingWrapper>
       <Discover />
       <CurrenlyReading />
+      <Reviews />
     </S.Wrapper>
   );
 };

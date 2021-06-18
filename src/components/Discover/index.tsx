@@ -11,7 +11,7 @@ const Discover = () => {
   return (
     <S.Wrapper>
       <S.header>
-        <Title text="Discover new book" />
+        <Title text="Discover new books" />
         <AditionalContent text="More" />
       </S.header>
       <S.SwipperWrapper>
