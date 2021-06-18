@@ -25,6 +25,7 @@ const theme = {
     bg: "#FFFCF9",
     primary: "#FFF6E5",
     secondary: "#FF6978",
+    green: "#EEF5DB",
     texts: "#3F4043",
     links: "#4ABDF1",
     placeholder: "#54565A",
