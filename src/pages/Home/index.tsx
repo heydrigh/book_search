@@ -1,20 +1,20 @@
-import { useEffect } from "react";
 import * as S from "./styles";
-import api from "../../services/api";
+import { useHistory } from "react-router-dom";
 import Searchbar from "../../components/Searchbar";
 import Discover from "../../components/Discover";
 import CurrenlyReading from "../../components/CurrentlyReading";
 import Reviews from "../../components/Reviews";
 
 const Home = () => {
-  const getBook = async () => {
-    const response = await api.get("harry potter");
-    console.log(response.data);
+  const history = useHistory();
+
+  const handleSendToSearch = () => {
+    history.push("/search");
   };
 
   return (
     <S.Wrapper>
-      <Searchbar />
+      <Searchbar onClick={handleSendToSearch} />
       <S.GreetingWrapper>
         <h4>Hi, &nbsp;</h4>
         <S.Username>Heydrigh Ribeiro &nbsp;</S.Username>
