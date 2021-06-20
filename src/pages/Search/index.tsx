@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import * as S from "./styles";
 import { useHistory } from "react-router-dom";
 import Searchbar from "../../components/Searchbar";
+import Navbar from "../../components/Navbar";
 import Book from "../../components/Book";
 import api from "../../services/api";
 import { Item } from "../../types/volumes";
@@ -76,6 +77,7 @@ const Search = () => {
       {books && books.length > 2 && (
         <S.LoadMore onClick={handleSearchMore}>Load more</S.LoadMore>
       )}
+      <Navbar />
     </S.Wrapper>
   );
 };

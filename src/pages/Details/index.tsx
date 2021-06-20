@@ -5,6 +5,7 @@ import { Link, useRouteMatch } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
 import api from "../../services/api";
 import { CircularProgress } from "@material-ui/core";
+import Navbar from "../../components/Navbar";
 
 type BookParams = {
   id: string;

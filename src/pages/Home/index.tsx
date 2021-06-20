@@ -4,6 +4,7 @@ import Searchbar from "../../components/Searchbar";
 import Discover from "../../components/Discover";
 import CurrenlyReading from "../../components/CurrentlyReading";
 import Reviews from "../../components/Reviews";
+import Navbar from "../../components/Navbar";
 
 const Home = () => {
   const history = useHistory();
@@ -23,6 +24,7 @@ const Home = () => {
       <Discover />
       <CurrenlyReading />
       <Reviews />
+      <Navbar />
     </S.Wrapper>
   );
 };

@@ -1,4 +1,15 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
+
+const appearFromLeft = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
 
 export const Wrapper = styled.main`
   ${({ theme }) => css`
@@ -8,6 +19,7 @@ export const Wrapper = styled.main`
     justify-content: center;
     align-items: center;
     width: 37.5rem;
+    animation: ${appearFromLeft} 1s ease-in;
   `}
 `;
 

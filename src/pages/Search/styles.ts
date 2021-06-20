@@ -1,5 +1,16 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { Button } from "@material-ui/core";
+
+const appearFromLeft = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
 
 export const Wrapper = styled.main`
   ${({ theme }) => css`
@@ -7,7 +18,9 @@ export const Wrapper = styled.main`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
+    animation: ${appearFromLeft} 1s;
   `}
 `;
 
@@ -31,6 +44,7 @@ export const LoadMore = styled(Button)`
   ${({ theme }) => css`
     && {
       margin: 2rem 0;
+      padding: 1rem 4.2rem;
       text-transform: none;
       font-size: 1.6rem;
       background-color: ${theme.colors.secondary};

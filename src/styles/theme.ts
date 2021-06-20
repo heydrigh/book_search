@@ -34,6 +34,7 @@ const theme = {
     descriptionGray: "rgba(49, 49, 49, 0.8)",
     links: "#4ABDF1",
     placeholder: "#54565A",
+    iconGray: "#BFBEBF",
     white: "#FFFFFF",
     black: "#000000",
     gray: "rgba(49, 49, 49, 0.6)"

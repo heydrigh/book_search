@@ -1,4 +1,15 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
+
+const appearFromLeft = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
 
 export const Wrapper = styled.main`
   ${({ theme }) => css`
@@ -9,6 +20,8 @@ export const Wrapper = styled.main`
     background-color: ${theme.colors.primary};
     height: 100vh;
     padding: 5rem 2rem 2rem 2rem;
+
+    animation: ${appearFromLeft} 1s ease-in;
   `}
 `;
 
