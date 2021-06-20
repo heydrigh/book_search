@@ -6,6 +6,7 @@ export interface Books {
 export interface Item {
   id: string;
   volumeInfo: VolumeInfo;
+  saleInfo?: SaleInfo;
 }
 
 export interface VolumeInfo {
@@ -13,7 +14,7 @@ export interface VolumeInfo {
   authors: string[];
   publisher?: string;
   publishedDate?: Date;
-  description: string;
+  description?: string | any;
   pageCount?: number;
   printType?: string;
   categories?: string[];
@@ -30,4 +31,23 @@ export interface VolumeInfo {
 export interface ImageLinks {
   smallThumbnail?: string;
   thumbnail: string;
+}
+
+export interface SaleInfo {
+  country?: string;
+  saleability?: string;
+  isEbook?: boolean;
+  listPrice?: SaleInfoListPrice;
+  retailPrice?: SaleInfoListPrice;
+  buyLink?: string;
+}
+
+export interface SaleInfoListPrice {
+  amount?: number;
+  currencyCode?: string;
+}
+
+export interface OfferListPrice {
+  amountInMicros?: number;
+  currencyCode?: string;
 }

@@ -33,7 +33,7 @@ export const BookInfos = styled.div`
 `;
 
 export const BookDetails = styled.div`
-  margin-left: 0.8rem;
+  margin-left: 13rem;
 `;
 
 export const BookTitle = styled.h2`
@@ -59,4 +59,6 @@ export const BookPages = styled.div`
 export const BookCover = styled.div`
   margin-top: -1.5rem;
   margin-left: 3rem;
+  overflow: hidden;
+  position: absolute;
 `;

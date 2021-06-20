@@ -15,7 +15,7 @@ const Search = () => {
   const [maxResults, setMaxResults] = useState(6);
 
   const handleSendToDetails = (bookId: string) => {
-    history.push(bookId);
+    history.push(`/details/${bookId}`);
   };
 
   const handleSearchMore = useCallback(() => {

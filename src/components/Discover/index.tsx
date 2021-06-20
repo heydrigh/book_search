@@ -18,25 +18,20 @@ const Discover = () => {
         <S.OvarWrapper>
           <img src={oval} alt="Oval" />
         </S.OvarWrapper>
-        <Swiper
-          spaceBetween={-50}
-          slidesPerView={1}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
-        >
-          <SwiperSlide>
+        <Swiper spaceBetween={2} slidesPerView={1}>
+          <SwiperSlide className="slider">
             <img src={banner} alt="banner" />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="slider">
             <img src={banner} alt="banner" />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="slider">
             <img src={banner} alt="banner" />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="slider">
             <img src={banner} alt="banner" />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="slider">
             <img src={banner} alt="banner" />
           </SwiperSlide>
         </Swiper>

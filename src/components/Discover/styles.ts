@@ -26,6 +26,9 @@ export const SwipperWrapper = styled.div`
   justify-content: center;
   width: 100%;
   position: relative;
+  .slider {
+    width: 15rem;
+  }
 `;
 
 export const OvarWrapper = styled.div`
