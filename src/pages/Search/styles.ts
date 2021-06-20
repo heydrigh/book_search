@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Button } from "@material-ui/core";
 
 export const Wrapper = styled.main`
   ${({ theme }) => css`
@@ -20,7 +21,24 @@ export const BooksWrapper = styled.div`
 
 export const LoadingWrapper = styled.div`
   display: flex;
+  overflow: hidden;
   justify-content: center;
   align-items: center;
   margin-top: 6rem;
+`;
+
+export const LoadMore = styled(Button)`
+  ${({ theme }) => css`
+    && {
+      margin: 2rem 0;
+      text-transform: none;
+      font-size: 1.6rem;
+      background-color: ${theme.colors.secondary};
+      color: ${theme.colors.white};
+
+      &:hover {
+        background-color: ${theme.colors.secondaryHover};
+      }
+    }
+  `}
 `;

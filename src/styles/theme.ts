@@ -26,6 +26,7 @@ const theme = {
     bg: "#FFFCF9",
     primary: "#FFF6E5",
     secondary: "#FF6978",
+    secondaryHover: "#ff364a",
     green: "#EEF5DB",
     texts: "#3F4043",
     textGray: "rgba(49, 49, 49, 0.8)",

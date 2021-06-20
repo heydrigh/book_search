@@ -35,7 +35,7 @@ const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
     vertical-align: baseline;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
+    overflow-x: hidden;
 }
 html {
   font-size: 62.5%;
