@@ -12,6 +12,7 @@ const theme = {
       "SfPro, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
     bold: 600,
     sizes: {
+      ultrasmall: "1.2rem",
       xxsmall: "1.4rem",
       xsmall: "1.6rem",
       small: "1.8rem",
@@ -27,6 +28,7 @@ const theme = {
     secondary: "#FF6978",
     green: "#EEF5DB",
     texts: "#3F4043",
+    textGray: "rgba(49, 49, 49, 0.8)",
     links: "#4ABDF1",
     placeholder: "#54565A",
     white: "#FFFFFF",
