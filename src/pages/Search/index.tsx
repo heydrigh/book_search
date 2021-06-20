@@ -27,6 +27,9 @@ const Search = () => {
       const handleSearchBooks = async () => {
         setLoading(true);
         try {
+          if (search === "") {
+            setBooks([]);
+          }
           const response = await api.get(
             `?q=${search}&maxResults=${maxResults}`
           );
@@ -46,10 +49,10 @@ const Search = () => {
 
   return (
     <S.Wrapper>
-      <Searchbar onChange={(e) => setSearch(e.target.value)} />
+      <Searchbar maxLength={16} onChange={(e) => setSearch(e.target.value)} />
       {!loading ? (
         <S.BooksWrapper>
-          {books.length > 1 &&
+          {!!books &&
             books.map((book) => (
               <Book
                 key={book.id}
@@ -70,7 +73,7 @@ const Search = () => {
           <CircularProgress />
         </S.LoadingWrapper>
       )}
-      {books.length > 1 && (
+      {books && books.length > 2 && (
         <S.LoadMore onClick={handleSearchMore}>Load more</S.LoadMore>
       )}
     </S.Wrapper>

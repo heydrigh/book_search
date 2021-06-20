@@ -4,6 +4,7 @@ import { Item } from "../../types/volumes";
 import { Link, useRouteMatch } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
 import api from "../../services/api";
+import { CircularProgress } from "@material-ui/core";
 
 type BookParams = {
   id: string;
@@ -37,32 +38,51 @@ const Details = () => {
           <FiArrowLeft color={"#000"} size={24} />
         </Link>
       </S.BackButton>
+      {loading && <CircularProgress />}
+
       <S.BookCover>
         <img src={book?.volumeInfo.imageLinks.thumbnail} alt="Book cover" />
       </S.BookCover>
       <S.BookTitle>{book?.volumeInfo.title}</S.BookTitle>
-      <S.BookAuthors>{book?.volumeInfo.authors.join(", ")}</S.BookAuthors>
+      <S.BookAuthors>
+        {!!book?.volumeInfo.authors
+          ? book?.volumeInfo.authors.join(", ")
+          : "Unknown author"}
+      </S.BookAuthors>
       <S.BookDescription
         dangerouslySetInnerHTML={{ __html: book?.volumeInfo.description }}
       />
-      <S.Categories>
-        <strong>Categories:</strong> {book?.volumeInfo.categories?.join(", ")}
-      </S.Categories>
-      <S.InformationsWrapper>
-        <S.AverageRating>
-          Average rating: {book?.volumeInfo.averageRating}
-        </S.AverageRating>
-      </S.InformationsWrapper>
-      <S.InformationsWrapper>
-        <S.Language>Language: {book?.volumeInfo.language}</S.Language>
-        <S.PageCount>Pages: {book?.volumeInfo.pageCount}</S.PageCount>
-        <S.Price>
-          Price: {book?.saleInfo?.listPrice?.amount}
-          {book?.saleInfo?.listPrice?.currencyCode}
-        </S.Price>
-      </S.InformationsWrapper>
+      {!!book?.volumeInfo.categories && (
+        <S.Categories>
+          <strong>Categories:</strong> {book?.volumeInfo.categories?.join(", ")}
+        </S.Categories>
+      )}
 
-      <S.BuyAt href={book?.saleInfo?.buyLink}>Click to buy </S.BuyAt>
+      <S.InformationsWrapper>
+        {book?.volumeInfo.averageRating && (
+          <S.AverageRating>
+            Average rating: {book?.volumeInfo.averageRating}
+          </S.AverageRating>
+        )}
+      </S.InformationsWrapper>
+      <S.InformationsWrapper>
+        <S.Language>
+          Language: <strong>{book?.volumeInfo.language}</strong>
+        </S.Language>
+
+        <S.PageCount>
+          Pages: <strong>{book?.volumeInfo.pageCount}</strong>
+        </S.PageCount>
+        {book?.saleInfo?.listPrice?.amount && (
+          <S.Price>
+            Price: <strong>{book?.saleInfo?.listPrice?.amount}</strong>
+            <strong>{book?.saleInfo?.listPrice?.currencyCode}</strong>
+          </S.Price>
+        )}
+      </S.InformationsWrapper>
+      {book?.saleInfo?.listPrice?.amount && (
+        <S.BuyAt href={book?.saleInfo?.buyLink}>Buy now</S.BuyAt>
+      )}
     </S.Wrapper>
   );
 };

@@ -90,5 +90,18 @@ export const Language = styled.div``;
 export const Price = styled.div``;
 
 export const BuyAt = styled.a`
-  font-size: 1.4rem;
+  ${({ theme }) => css`
+    border-radius: 0.5rem;
+    background-color: ${theme.colors.secondary};
+    padding: 1.4rem;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: ${theme.colors.white};
+    text-decoration: none;
+    transition: all 0.4s ease;
+    &:hover {
+      background-color: ${theme.colors.secondaryHover};
+    }
+  `}
 `;

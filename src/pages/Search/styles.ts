@@ -35,6 +35,7 @@ export const LoadMore = styled(Button)`
       font-size: 1.6rem;
       background-color: ${theme.colors.secondary};
       color: ${theme.colors.white};
+      transition: all 0.4s ease;
 
       &:hover {
         background-color: ${theme.colors.secondaryHover};
