@@ -43,7 +43,7 @@ html {
 ${({ theme }) => css`
   body {
     font-family: ${theme.font.family};
-    background-color: ${theme.colors.primary};
+    background-color: ${theme.colors.bg};
     width: 100vw;
     display: flex;
     justify-content: center;

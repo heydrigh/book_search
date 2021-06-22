@@ -28,6 +28,7 @@ const theme = {
     secondary: "#FF6978",
     secondaryHover: "#ff364a",
     green: "#EEF5DB",
+    headerBg: "#FFF6E5",
     texts: "#3F4043",
     textTitle: "#36383A",
     textGray: "rgba(49, 49, 49, 0.8)",
@@ -37,6 +38,7 @@ const theme = {
     iconGray: "#BFBEBF",
     white: "#FFFFFF",
     black: "#000000",
+    darkBlue: "#00173D",
     gray: "rgba(49, 49, 49, 0.6)"
   },
   spacings: {

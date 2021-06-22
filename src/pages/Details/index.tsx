@@ -5,7 +5,7 @@ import { Link, useRouteMatch } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
 import api from "../../services/api";
 import { CircularProgress } from "@material-ui/core";
-import Navbar from "../../components/Navbar";
+import HeaderBackground from "../../components/HeaderBackground";
 
 type BookParams = {
   id: string;
@@ -34,6 +34,7 @@ const Details = () => {
 
   return (
     <S.Wrapper>
+      <HeaderBackground />
       <S.BackButton>
         <Link to="/search">
           <FiArrowLeft color={"#000"} size={24} />
